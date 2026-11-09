@@ -1,0 +1,6 @@
+{
+  "name": "TO BE CHALLENGE — Grammar & Subject-Verb Arcade",
+  "description": "Interactive English grammar and subject-verb agreement arcade featuring 5 game modes, 5 progressive difficulty levels, Subject-Verb Pop balloon adventure, Golden Balloon fireworks, and a 5-band Web Audio DSP synthesizer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

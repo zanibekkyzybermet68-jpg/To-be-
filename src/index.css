@@ -1,0 +1,67 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: 'Outfit', sans-serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #080915;
+    color: #f8fafc;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono, .tabular-nums {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes wrongWobble {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  20% { transform: translateX(-10px) rotate(-6deg); }
+  40% { transform: translateX(10px) rotate(6deg); }
+  60% { transform: translateX(-8px) rotate(-4deg); }
+  80% { transform: translateX(8px) rotate(4deg); }
+}
+
+@keyframes balloonFloatIn {
+  0% { opacity: 0; transform: translateY(28px) scale(0.9); }
+  70% { opacity: 1; transform: translateY(-4px) scale(1.03); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.animate-float-slow {
+  animation: floatSlow 3.4s ease-in-out infinite;
+}
+
+.animate-wrong-wobble {
+  animation: wrongWobble 0.45s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.animate-balloon-in {
+  animation: balloonFloatIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.cyber-grid-bg {
+  background-color: #080915;
+  background-image:
+    radial-gradient(circle at 15% 15%, rgba(0, 240, 255, 0.08) 0%, transparent 35%),
+    radial-gradient(circle at 85% 80%, rgba(176, 38, 255, 0.08) 0%, transparent 35%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+}
